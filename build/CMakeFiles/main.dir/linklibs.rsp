@@ -1,0 +1,1 @@
+  -LF:/project_myself/tom.chen/sslclient/third-party/pthead_2.9.0_release/dll  -LF:/project_myself/tom.chen/sslclient/third-party/openssl_1.1.1f  -lpthreadGC2 -lws2_32 -lMswsock -lcrypto-1_1 -lssl-1_1 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

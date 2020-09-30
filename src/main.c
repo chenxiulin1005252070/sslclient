@@ -118,7 +118,7 @@ int main ()
 	char sendmsg[MSGLENGTH] = "\0";
 	char revmsg[MSGLENGTH] = "\0";
 	//接收服务器消息
-	
+	int err;
 	while (1)
 	{
 		printf ("please input the data to send:\n");
@@ -126,6 +126,9 @@ int main ()
 		//向服务器发送消息
 		SSL_write (ssl, sendmsg, strlen (sendmsg));
 		printf ("send message ' %s ' success\n", sendmsg);
+        err = SSL_read(ssl, revmsg, sizeof(revmsg) - 1);
+        printf ("read[%d] message ' %s ' \n", err, revmsg);
+        
 	}
 	//关闭连接
 	SSL_shutdown (ssl);
